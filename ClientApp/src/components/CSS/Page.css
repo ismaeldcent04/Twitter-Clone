@@ -1,0 +1,14 @@
+﻿body {
+	--SocialApp-color: rgb(29, 155, 240);
+	--SocialApp-background: #e6ecf0;
+	--SocialApp-border-color: #f0f0f0;
+}
+
+.app {
+	display: flex;
+	height: 100vh;
+	max-width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 10px;
+}
