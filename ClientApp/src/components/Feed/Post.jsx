@@ -1,13 +1,20 @@
 ﻿import { Avatar } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import "../CSS/Post.css";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import FavoriteOutlinedIcon from "@material-ui/icons/FavoriteOutlined";
 import PublishIcon from "@material-ui/icons/Publish";
 
 function Post({ displayName, username, verified, image, text, avatar }) {
+  const [isliked, setIsliked] = useState(false);
+  function handleLike() {
+    setIsliked((prevState) => {
+      return !prevState;
+    });
+  }
   return (
     <div className="post">
       <div className="post_avatar">
@@ -31,7 +38,16 @@ function Post({ displayName, username, verified, image, text, avatar }) {
           <div className="post_footer">
             <ChatBubbleOutlineIcon fontSize="small" />
             <RepeatIcon fontSize="small" />
-            <FavoriteBorderIcon fontSize="small" />
+
+            {isliked ? (
+              <FavoriteOutlinedIcon
+                onClick={handleLike}
+                fontSize="small"
+                style={{ color: "red" }}
+              />
+            ) : (
+              <FavoriteBorderIcon onClick={handleLike} fontSize="small" />
+            )}
             <PublishIcon fontSize="small" />
           </div>
         </div>
