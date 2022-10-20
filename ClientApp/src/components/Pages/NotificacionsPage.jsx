@@ -1,5 +1,4 @@
 import React from "react";
-import HomePageFeed from "../Feed/HomePageFeed";
 import NotificationsPageFeed from "../Feed/NotificationsPageFeed";
 import Sidebar from "../Sidebar/Sidebar";
 import Widgets from "../Widgets/Widgets";

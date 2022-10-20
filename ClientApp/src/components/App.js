@@ -5,6 +5,8 @@ import ProfilePage from "./Pages/ProfilePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BookmarksPage from "./Pages/BookmarksPage";
 import NotificacionsPage from "./Pages/NotificacionsPage";
+import ListPage from "./Pages/ListPage";
+import MessagesPage from "./Pages/MessagesPage";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             element={<NotificacionsPage />}
             exact
           ></Route>
+          <Route path="/list" element={<ListPage />} exact></Route>
+          <Route path="/messages" element={<MessagesPage />} exact></Route>
         </Routes>
       </BrowserRouter>
     </div>

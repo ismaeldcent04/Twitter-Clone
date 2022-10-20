@@ -10,7 +10,7 @@ import PersonOutlineOutlinedIcon from "@material-ui/icons/PersonOutlineOutlined"
 import MoreOutlinedIcon from "@material-ui/icons/MoreOutlined";
 import NotificationsOutlinedIcon from "@material-ui/icons/NotificationsOutlined";
 import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
-import { Avatar, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import SidebarProfileButton from "./SidebarProfileButton";
 
 function Sidebar({ avatar, userName, displayName }) {
@@ -32,7 +32,11 @@ function Sidebar({ avatar, userName, displayName }) {
         Icon={NotificationsOutlinedIcon}
       />
 
-      <SidebarOption text="Messages" Icon={EmailOutlinedIcon} />
+      <SidebarOption
+        text="Messages"
+        href="/messages"
+        Icon={EmailOutlinedIcon}
+      />
       <SidebarOption
         text="Bookmarks"
         href="/bookmarks"
